@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <unistd.h>
+
+int main() {
+	execlp("killall", "killall", "script5a", NULL);
+
+	return(0);
+}
