@@ -1,7 +1,7 @@
 # SoalShift_modul2_A05
 
 LAPORAN MODUL1 Kelompok A5
-Nama : Chaniyah Zulfa M (05111740000115)
+Nama : Chaniyah Zulfa M (05111740000115) <br>
 	Faqih Fathan I. (05111740000175)
 
  LAPORAN 2 SISOP 2019
