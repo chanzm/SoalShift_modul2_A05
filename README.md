@@ -339,4 +339,98 @@ Per menit memasukkan log#.log ke dalam folder tersebut
 ‘#’ : increment per menit. Mulai dari 1
 Buatlah program c untuk menghentikan program di atas.
 NB: Dilarang menggunakan crontab dan tidak memakai argumen ketika menjalankan program.
+jawab:
+5a
+
+#include <stdio.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <time.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <syslog.h>
+#include <stdlib.h>
+#include <errno.h>
+
+int main() {
+  pid_t pid, sid;
+
+  pid = fork();
+
+  if (pid < 0) {
+    exit(EXIT_FAILURE);
+  }
+
+  if (pid > 0) {
+    exit(EXIT_SUCCESS);
+  }
+
+  umask(0);
+
+  sid = setsid();
+
+  if (sid < 0) {
+    exit(EXIT_FAILURE);
+  }
+
+  if ((chdir("/")) < 0) {
+    exit(EXIT_FAILURE);
+  }
+
+  close(STDIN_FILENO);
+  close(STDOUT_FILENO);
+  close(STDERR_FILENO);
+mkdir("/home/faqih/log", 0700);
+while(1) {
+	 time_t timer;
+    char buffer[26];
+    struct tm* tm_info;
+
+    time(&timer);
+    tm_info = localtime(&timer);
+
+    strftime(buffer, 26, "%d:%m:%Y-%H:%M", tm_info);
+
+
+        char dir[100];
+        char nama[100];
+        sprintf(nama,"%s", buffer);
+        printf("%s", nama);
+        sprintf(dir, "/home/faqih/log/%s", nama);
+        mkdir(dir, 0700);
+	int i;
+        for(i=1; i<30; i++){
+                FILE *file_lama, *file_baru;
+                file_lama = fopen("/var/log/syslog", "r");
+                char file[100];
+                sprintf(file, "/home/faqih/log/%s/log%d.log", nama, i);
+                file_baru = fopen(file, "w");
+                char cr;
+                while(fscanf(file_lama, "%c", &cr) != EOF)
+                {fprintf(file_baru, "%c", cr);}
+                fclose(file_lama);
+                fclose(file_baru);
+                sleep(60);
+        }
+ }
+  exit(EXIT_SUCCESS);
+}
+penjelasan:
+cari jam dimana program berjalan
+jam diperuntukkan sebagai nama folder 
+lakukan looping 30 menit untuk folder dan tiap menit untuk file
+isi file diambil dari direktori /var/log/syslog
+
+5b
+#include <stdio.h>
+#include <unistd.h>
+
+int main() {
+	execlp("killall", "killall", "script5a", NULL);
+
+	return(0);
+}
+
+digunakan kill all dan nama file yang akan di kill
 
