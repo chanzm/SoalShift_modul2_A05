@@ -1,6 +1,6 @@
 # SoalShift_modul2_A05
 
-LAPORAN MODUL1 Kelompok A5
+LAPORAN MODUL1 Kelompok A5 <br>
 Nama : Chaniyah Zulfa M (05111740000115) <br>
 	Faqih Fathan I. (05111740000175)
 
