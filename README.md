@@ -1,5 +1,11 @@
 # SoalShift_modul2_A05
 
+LAPORAN MODUL1 Kelompok A5
+Nama : Chaniyah Zulfa M (05111740000115)
+	Faqih Fathan I. (05111740000175)
+
+ LAPORAN 2 SISOP 2019
+
 1.) Elen mempunyai pekerjaan pada studio sebagai fotografer. Suatu hari ada seorang klien yang bernama Kusuma yang meminta untuk mengubah nama file yang memiliki ekstensi .png menjadi “[namafile]_grey.png”. Karena jumlah file yang diberikan Kusuma tidak manusiawi, maka Elen meminta bantuan kalian untuk membuat suatu program C yang dapat mengubah nama secara otomatis dan diletakkan pada direktori /home/[user]/modul2/gambar.
 Catatan : Tidak boleh menggunakan crontab.
 jawab=
