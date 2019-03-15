@@ -328,7 +328,7 @@ Strcat adalah untuk menggabungkan angka yang diubah ke string tadi dan juga meng
 Jalankan kodingan, lalu masuk ke Documents/makanan/. Didalamnya terdapat file makan_enak.txt.
 Lalu lakukan perintah “touch -a makan_enak.txt” , lalu ls. Maka akan ke create Makan_sehat1.txt, makan_sehat2.txt, dll setiap 5 detik jika file terakhir di akses masih dalam rentang 1-30 detik.
 Touch -a sendiri adalah untuk membuka makan_enak.txt.
-Setelah itu untuk melihat pid lakukan perintah “ps -e | grep hasil4”.
+Setelah itu untuk mengecek daemon jalan atau tidak dan melihat pid lakukan perintah “ps -e | grep hasil4”.
 Akan muncul pid, lalu lakukan kill dengan cara “kill (pid)”.
 
 5.) Kerjakan poin a dan b di bawah:
