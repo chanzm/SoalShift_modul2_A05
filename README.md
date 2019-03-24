@@ -339,7 +339,7 @@ Per menit memasukkan log#.log ke dalam folder tersebut
 ‘#’ : increment per menit. Mulai dari 1
 Buatlah program c untuk menghentikan program di atas.
 NB: Dilarang menggunakan crontab dan tidak memakai argumen ketika menjalankan program.
-jawab:
+jawab: <br>
 5a
 ```
 #include <stdio.h>
@@ -424,9 +424,10 @@ lakukan looping 30 menit untuk folder dan tiap menit untuk file
 isi file diambil dari direktori /var/log/syslog
 
 5b
+```
 #include <stdio.h>
 #include <unistd.h>
-```
+
 int main() {
 	execlp("killall", "killall", "script5a", NULL);
 
