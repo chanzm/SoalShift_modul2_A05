@@ -341,7 +341,7 @@ Buatlah program c untuk menghentikan program di atas.
 NB: Dilarang menggunakan crontab dan tidak memakai argumen ketika menjalankan program.
 jawab:
 5a
-
+```
 #include <stdio.h>
 #include <string.h>
 #include <sys/types.h>
@@ -416,6 +416,7 @@ while(1) {
  }
   exit(EXIT_SUCCESS);
 }
+```
 penjelasan:
 cari jam dimana program berjalan
 jam diperuntukkan sebagai nama folder 
@@ -425,12 +426,12 @@ isi file diambil dari direktori /var/log/syslog
 5b
 #include <stdio.h>
 #include <unistd.h>
-
+```
 int main() {
 	execlp("killall", "killall", "script5a", NULL);
 
 	return(0);
 }
-
+```
 digunakan kill all dan nama file yang akan di kill
 
